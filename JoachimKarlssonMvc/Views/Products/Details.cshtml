@@ -1,0 +1,24 @@
+﻿@model JoachimKarlssonMvc.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+
+
+<div class="container d-flex justify-content-center">
+
+    <img class="border img-fluid" src="@Html.DisplayFor(model => model.ImgUrl)" alt="">
+    <div class="mx-5">
+        <h3> @Html.DisplayFor(model => model.Name)</h3>
+        <h4 class="text-danger">@Html.DisplayFor(model => model.Price);-</h4>
+        <p>@Html.DisplayFor(model => model.Description)</p>
+        <h2><i class="fas fa-cart-plus"></i></h2>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

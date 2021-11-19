@@ -1,0 +1,57 @@
+﻿@model IEnumerable<JoachimKarlssonMvc.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+
+   <div class="container my-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        @foreach (var item in Model)
+        {
+            <div class="col">
+                <div class="card h-100">
+                    
+                    <div class="card-body">
+                        <div class="product-image d-flex justify-content-center align-items-center">
+                            <img class="img-fluid " src="@Html.DisplayFor(modelItem => item.ImgUrl)" alt="">
+                        </div>
+                        <div class="card-short-desc">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                            <p class=" ">@Html.DisplayFor(modelItem => item.ShortDescription)</p>
+                        </div>
+                        
+                        <div class="card-content">
+                            <div class="d-flex justify-content-between">
+
+                                <div>
+                                    <p class="card-text cart-icon"><i class="fas fa-cart-plus"></i></p>
+                                    <button class="btn btn-dark">@Html.ActionLink("Show More", "Details", new { id = item.Id }, new { @class = "text-white text-decoration-none" })</button>
+
+                                </div>
+                                <h5 class="text-danger">@Html.DisplayFor(modelItem => item.Price);-</h5>
+                            </div>
+                            
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        }
+
+
+
+       </div>
+   </div>
+
+
+

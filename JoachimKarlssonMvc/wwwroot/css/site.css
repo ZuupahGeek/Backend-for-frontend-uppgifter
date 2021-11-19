@@ -1,0 +1,32 @@
+﻿/*Products view*/
+.product-image {
+    width: 15rem;
+    height: 17rem;
+}
+
+.card-content {
+   
+}
+.card-short-desc {
+    font-size: 0.8rem;
+    width: 13rem;
+    height: 10rem;
+}
+
+.cart-icon {
+    font-size: 1.5rem;
+}
+
+.btn-product {
+    font-size: 0.6rem;
+    text-decoration: none;
+    color: white;
+}
+
+.product-card {
+    width: 17rem;
+    border-radius: 1rem;
+}
+
+/* Details view */
+
